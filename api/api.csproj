@@ -7,13 +7,31 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Faker.Net" Version="1.0.3" />
+    <PackageReference Include="Faker.Net" Version="1.1.1" />
     <PackageReference Include="MailKit" Version="1.16.1" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="1.0.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
   </ItemGroup>
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
-    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="tests\obj\Debug\netcoreapp2.0\tests.AssemblyInfo.cs" />
+    <Compile Remove="tests\UnitTest1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="tests\obj\tests.csproj.nuget.cache" />
+    <None Remove="tests\obj\tests.csproj.nuget.g.props" />
+    <None Remove="tests\obj\tests.csproj.nuget.g.targets" />
+    <None Remove="tests\obj\Release\netcoreapp2.0\tests.assets.cache" />
+    <None Remove="tests\obj\Release\netcoreapp2.0\tests.csprojAssemblyReference.cache" />
+    <None Remove="tests\obj\Release\netcoreapp2.2\tests.assets.cache" />
+    <None Remove="tests\obj\Release\netcoreapp2.2\tests.csprojAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="tests\obj\project.assets.json" />
   </ItemGroup>
 </Project>
