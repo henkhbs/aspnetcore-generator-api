@@ -20,6 +20,7 @@ namespace tests
         [Fact]
         public void SortShouldOrderResults()
         {
+            // new teststuff
             var range = new Range { Count = 3, Sort = true };
             var values = new[] { "a", "c", "b" };
             var counter = 0;
